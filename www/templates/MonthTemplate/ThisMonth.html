@@ -1,0 +1,95 @@
+﻿
+<ion-view view-title="GetTrek">
+    <ion-content>
+        <div class="row">
+            <div class="col col-75" style="text-align:center;font-family: calibri;font-size: x-large;color:#B53D56;margin-top: 4%;">{{ThisMonthData.MonthName}} - {{Year}}</div>
+         <div class="col col-25" style="margin-left: 3%; padding-top: 0%;">
+         <div class="myclass">
+    <a class="btn" ng-click="changeMonth('prev')"><i class="icon ion-chevron-left"></i></a>
+    <button class="btn" style="margin-left:2px;" data-ng-click="changeMonth('next')" data-ng-disabled="nextBtnDisable"><i class="icon ion-chevron-right myicont"></i></button></div>
+        </div>
+        </div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right list" style="margin-top:2%" type="item-text-wrap" href="#/ThisMonthdetail/{{ThisMonthData.AllData}}/{{ThisMonthData.AllDataName}}/all">
+           <!--<div style="float:left;height:100%;">ahah</div> -->
+            <div class="mydiv" style="background-color:#337AB7">{{ThisMonthData.AllData}}</div>
+              <h2 style="margin-left:40px">{{ThisMonthData.AllDataName}}</h2>
+            <i class="icon ion-chevron-right icon-accessory"></i>           
+      </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right list" style="margin-top:2%" type="item-text-wrap" href="#/ThisMonthdetail/{{ThisMonthData.Present}}/{{ThisMonthData.PresentName}}/Present">
+            <!--<div style="float:left;height:100%;">ahah</div> -->
+            <div class="mydiv" style="background-color:#82AF6F">{{ThisMonthData.Present}}</div>
+            <h2 style="margin-left:40px">{{ThisMonthData.PresentName}}</h2>
+           <i class="icon ion-chevron-right icon-accessory"></i>           
+        </ion-item>
+    </ion-list>
+     <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right list" style="margin-top:2%" type="item-text-wrap"  href="#/ThisMonthdetail/{{ThisMonthData.Absent}}/{{ThisMonthData.AbsentName}}/Absent">
+            <!--<div style="float:left;height:100%;">ahah</div> -->
+            <div class="mydiv" style="background-color:#D15B47">{{ThisMonthData.Absent}}</div>
+            <h2 style="margin-left:40px">{{ThisMonthData.AbsentName}}</h2>
+           <i class="icon ion-chevron-right icon-accessory"></i>           
+        </ion-item>
+    </ion-list>
+     <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right list" style="margin-top:2%" type="item-text-wrap"  href="#/ThisMonthdetail/{{ThisMonthData.Leave}}/{{ThisMonthData.LeaveName}}/Leave">
+            <!--<div style="float:left;height:100%;">ahah</div> -->
+            <div class="mydiv" style="background-color:#7DB9E1">{{ThisMonthData.Leave}}</div>
+            <h2 style="margin-left:40px">{{ThisMonthData.LeaveName}}</h2>
+            <i class="icon ion-chevron-right icon-accessory"></i>           
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right list" style="margin-top:2%" type="item-text-wrap" href="#/ThisMonthdetail/{{ThisMonthData.WeekOff}}/{{ThisMonthData.WeekOffName}}/WeekOff">
+            <!--<div style="float:left;height:100%;">ahah</div> -->
+            <div class="mydiv" style="background-color:#B4A605">{{ThisMonthData.WeekOff}}</div>
+            <h2 style="margin-left:40px">{{ThisMonthData.WeekOffName}}</h2>
+            <i class="icon ion-chevron-right icon-accessory"></i>           
+        </ion-item>
+    </ion-list>
+     <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right list" style="margin-top:2%" type="item-text-wrap" href="#/ThisMonthdetail/{{ThisMonthData.LateComer}}/{{ThisMonthData.LateComerName}}/LateComer">
+            <!--<div style="float:left;height:100%;">ahah</div> -->
+            <div class="mydiv" style="background-color:#407fbf">{{ThisMonthData.LateComer}}</div>
+            <h2 style="margin-left:40px">{{ThisMonthData.LateComerName}}</h2>
+           <i class="icon ion-chevron-right icon-accessory"></i>           
+        </ion-item>
+    </ion-list>
+     <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right list" style="margin-top:2%" type="item-text-wrap" href="#/ThisMonthdetail/{{ThisMonthData.WorkHard}}/{{ThisMonthData.WorkHardName}}/WorkHard">
+            <!--<div style="float:left;height:100%;">ahah</div> -->
+            <div class="mydiv" style="background-color:#007fff">{{ThisMonthData.WorkHard}}</div>
+            <h2 style="margin-left:40px">{{ThisMonthData.WorkHardName}}</h2>
+           <i class="icon ion-chevron-right icon-accessory"></i>           
+        </ion-item>
+    </ion-list>
+      <br />    
+         <div class="col">
+       <label style="color:#B53D56;padding-left:30px; font-family:calibri;font-size:20px;">Your selected branch is -</label><br/>
+        <label data-ng-hide="IsDropdownHide" style="color:#B53D56;padding-left:30px; font-family:calibri;font-size:27px;font-weight: 400;">{{selectedBranch.selected.BranchName|limitTo:10}}{{selectedBranch.selected.BranchName.length> 11 ? '..' : ''}}</label>
+          <ui-select
+            ng-model="selectedBranch.selected"
+            theme="select2"
+              data-ng-change="changeBranch(1)"    
+            style="margin-left: 8%;height: 26px;width: 50%;margin-top:4px"
+              ng-show="IsDropdownHide">
+            <ui-select-match placeholder="Select branch...">{{$select.selected.BranchName}}</ui-select-match>
+            <ui-select-choices  repeat="ddObj in dropdownData| filter: $select.search" >
+                {{ddObj.BranchName}}
+            </ui-select-choices>
+            </ui-select>
+        <button class="button button-outline button-positive" style=" float:right;margin-right:2%;" data-ng-click="changeBranch(0)">Change it</button>
+      </div>   
+  <!--  <div>
+        <label style="color:#B53D56;padding-left:30px; font-family:calibri;font-size:20px;">Your selected branch is -</label><br />
+        <label style="color:#B53D56;padding-left:30px; font-family:calibri;font-size:27px;font-weight: 400;">Trivantpuram </label>
+        <button class="button button-outline button-positive" style="margin-left:20px;">Change it</button>
+    </div>-->
+    <hr style="border-top: 1px solid #B53D56;"/>
+        <br />
+        <br />
+
+    </ion-content> 
+</ion-view>

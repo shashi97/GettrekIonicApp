@@ -1,0 +1,98 @@
+<ion-view view-title="GetTrek"> 
+    <div>
+        <ion-tabs class="tabs-icon-top tabs-color-active-positive tabs-top customClass">         
+          <ion-tab title="Today" ng-click="getAttendance(0)" >        
+          </ion-tab>
+          <ion-tab title="Yesterday" ng-click="getAttendance(1)" >        
+          </ion-tab> 
+          <ion-tab title="{{DateShow}}"  ng-click="getAttendance(2)" > 
+                           
+          </ion-tab> 
+        </ion-tabs>
+    </div>   
+   <ion-content>
+       <div>
+            <br />  
+            <br />
+            <br /> 
+              <div data-ng-show="showCalendar">
+                <ionic-datepicker input-obj="datepickerObject" >
+                    <button class="button button-block button-positive" > {{DateShow}}</button>
+                </ionic-datepicker>          
+             </div>
+
+
+
+
+
+            <!-- <div data-ng-show="CalenderShow">
+            <ionic-datepicker date="currentDate" min="minDate" max="maxDate" callback="datePickerCallback">
+            <button class="Calenderbtn"> {{ currentDate | date:'dd/MMMM/yyyy' }} </button>
+            </ionic-datepicker>  
+            </div>-->
+            <!--<ionic-datepicker input-obj="datepickerObject" ng-show="iscalendarHide">
+            <button class="button button-block button-positive" data-ng-model="DateShow"> {{DateShow}}</button>
+            </ionic-datepicker>-->
+
+            <ion-list data-ng-show="DataShow">
+                <div class="list">
+                    <ion-item class="item-remove-animate item-avatar item-icon-right list" type="item-text-wrap" href="#TodayDetail/all/{{currentDate}}/{{isDate}}/{{Today.AllData}}/{{Today.AllDataName}}">
+                    <div class="mydiv" style="background-color:#337AB7">{{Today.AllData}}</div>
+                    <h2 style="margin-left:40px;width:236px;">{{Today.AllDataName}}</h2>
+                    <i class="icon ion-chevron-right icon-accessory"></i>        
+                    </ion-item>
+
+                    <ion-item class="item-remove-animate item-avatar item-icon-right list" type="item-text-wrap" href="#TodayDetail/present/{{currentDate}}/{{isDate}}/{{Today.Present}}/{{Today.PresentName}}">
+                    <div class="mydiv" style="background-color:#82AF6F">{{Today.Present}}</div>
+                    <h2 style="margin-left:40px;width:236px;">{{Today.PresentName}}</h2>
+                    <i class="icon ion-chevron-right icon-accessory"></i>       
+                    </ion-item>
+
+                    <ion-item class="item-remove-animate item-avatar item-icon-right list" type="item-text-wrap" href="#TodayDetail/absent/{{currentDate}}/{{isDate}}/{{Today.Absent}}/{{Today.AbsentName}}">
+                    <div class="mydiv" style="background-color:#D15B47">{{Today.Absent}}</div>
+                    <h2 style="margin-left:40px;width:236px;">{{Today.AbsentName}}</h2>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+
+                    <ion-item class="item-remove-animate item-avatar item-icon-right list" type="item-text-wrap" href="#TodayDetail/leave/{{currentDate}}/{{isDate}}/{{Today.Leave}}/{{Today.LeaveName}}">
+                    <div class="mydiv" style="background-color:#7DB9E1">{{Today.Leave}}</div>
+                    <h2 style="margin-left:40px;width:236px;">{{Today.LeaveName}}</h2>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+
+                    <ion-item class="item-remove-animate item-avatar item-icon-right list" type="item-text-wrap" href="#TodayDetail/weekoff/{{currentDate}}/{{isDate}}/{{Today.WeekOff}}/{{Today.WeekOffName}}">
+                    <div class="mydiv" style="background-color:#B4A605">{{Today.WeekOff}}</div>
+                    <h2 style="margin-left:40px;width:236px;">{{Today.WeekOffName}}</h2>
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+                </div>
+            </ion-list>
+            <br />       
+                <div class="col" >
+                    <label style="color:#B53D56;padding-left:30px; font-family:calibri;font-size:20px;">Your selected branch is -</label><br/>
+
+                    <label data-ng-hide="IsDropdownHide" style="color:#B53D56;padding-left:30px; font-family:calibri;font-size:27px;font-weight: 400;">{{selectedBranch.selected.BranchName|limitTo:10}}{{selectedBranch.selected.BranchName.length> 11 ? '..' : ''}}</label>
+
+                    <ui-select
+                    ng-model="selectedBranch.selected"
+                    theme="select2"
+                    data-ng-change="changeBranch(1)"    
+                    style="margin-left: 8%;height: 26px;width: 50%;margin-top:4px"
+                    ng-show="IsDropdownHide">
+
+                    <ui-select-match placeholder="Select branch...">{{$select.selected.BranchName}}</ui-select-match>
+
+                    <ui-select-choices  repeat="ddObj in dropdownData| filter: $select.search" >
+                    {{ddObj.BranchName}}
+                    </ui-select-choices>
+                    </ui-select>
+
+                    <button class="button button-outline button-positive" style="margin-right:2%;float:right;" data-ng-click="changeBranch(0)">Change it</button>
+                </div>
+                <hr style="border-top: 1px solid #B53D56;"/>
+        </div>      
+  </ion-content>
+</ion-view>
+
+
+

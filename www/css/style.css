@@ -1,0 +1,259 @@
+/* Empty. Add your own CSS if you like */
+
+/*.tab-nav a:nth-child(odd) {max-width:12px;    background-color: white;    margin-left: 0px; }
+.tab-item-active:nth-child(odd) {
+background-color:blue;
+}*/
+.customWidth {
+    max-width: 12px;
+}
+
+.Custombutton {
+    float: right;
+    max-width: 2px;
+    height: 40px;
+}
+
+.customtab {
+    width: 100%;
+    height: 55px;
+    font-size: 45px;
+}
+
+.custom-Header {
+    border-color: #B53D56;
+    background-color: #B53D56;
+}
+
+.custom-Header-Logo {
+}
+
+.custom-Header-Text {
+    font-family: Calibri;
+    font-size: large;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 3px 0 0 70px;
+    max-width: 100%;
+    height: 100%;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 35px;
+    font-weight: 200;
+}
+
+.customClass {
+    color: #B53D56;
+    background-color: black;
+}
+
+.mydiv {
+    text-align: center;
+    background-color: #449D44;
+    position: absolute;
+    padding-top: 10px;
+    color: #fff;
+    top: 0px;
+    left: 16px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.bottombtn {
+    /*border-color: #B53D56;*/
+    background-color: #F2F1F1;
+    color: #444;
+    position: relative;
+    display: inline-block;
+    margin-top: 3px;
+    padding: 0 12px;
+    min-width: 52px;
+    min-height: 20px;
+    /*margin-top: 9px;*/
+    max-height: 45px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    line-height: 42px;
+    cursor: pointer;
+    margin-left: 10px;
+    /*margin-top: 0!important;*/
+    font-size: 25px;
+    color: #B53D56;
+    font-weight: 300;
+    max-width: 200px;
+    /*background-color: #B53D56;*/
+}
+
+.Daybtn {
+    background-color: #B53D56;
+    color: #fff;
+}
+
+.btn {
+    border-color: #B53D56;
+    background-color: #EFEDEE;
+    color: #B53D56;
+    position: relative;
+    display: inline-block;
+    margin: 15px 2px 0 -2px;
+    padding: 0px 10px 10px 10px;
+    max-width: 30px;
+    max-height: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+    .btn:active {
+        background-color: #B53D56;
+        color: #fff;
+    }
+
+.Calenderbtn {
+    border-color: #B53D56;
+    background-color: #EFEDEE;
+    color: #B53D56;
+    position: relative;
+    display: inline-block;
+    margin: 5px 2px 0 100px;
+    padding-bottom: 2px;
+    max-width: 100%;
+    max-height: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    /*line-height: 35px;*/
+    cursor: pointer;
+}
+
+    .Calenderbtn:active {
+        background-color: #B53D56;
+        color: #fff;
+    }
+
+.myicont:before {
+    content: "\f125";
+}
+
+.myclass {
+    width: 70px;
+}
+
+.custom-today-div {
+    border-color: #B53D56;
+    background-color: #B53D56;
+    position: absolute;
+}
+
+.custom-today-Padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 3px;
+}
+
+.custom-today-Text {
+    font-family: Calibri;
+    color: #fff;
+    position: absolute;
+    /*top: 0;
+    right: 0;
+    left: 0;*/
+    text-align: left;
+    font-size: 20px;
+    font-weight: 100;
+}
+.list {
+/*margin-top:15px;*/
+}
+.input[type='text']{
+text-align:left;
+
+}
+
+.input[type='text']:focus{
+text-align:right;
+
+margin-right:-10%;
+
+
+}
+
+/**************Dropper CSS**************/
+
+.newlabel {
+    /*-webkit-transition:.3s;*/
+    /*-moz-transition:.3s;*/
+    /*-o-transition:.3s;*/
+    /*transition:.3s;*/
+    cursor: pointer;
+    /*height:64px;*/
+    font-size: 20px;
+    display: inline-block;
+    /*background-size:cover;*/
+    padding: 1% 13% 0% 15%;
+    /*margin:.5em;*/
+    background: aliceblue;
+    /* box-shadow: 1px 1px 5px rgba(0, 135, 255,0.5);*/
+    border-radius: 12%;
+    width: 50%;
+    /*z-index:2;*/
+    /*flex-item-align:center*/
+}
+.dropitem {
+    border: 1px solid rgb(181, 61, 86);
+    border-bottom: none;
+    margin-top: 1px;
+    height: auto;
+    width: 72%;
+    left: 0%;
+    border-radius: 2%;
+    position: absolute;
+    background: #B53D56;
+    /*border: 1px solid #C6BEBE;*/
+    z-index: 2;
+}
+/*.ion-chevron-left {
+    color:green;
+}
+.ion-chevron-right {
+    color:black;
+}*/
+select option:hover {    
+    background-color:green;
+}
+.button.button-positive {
+    border-color: #b53d56;
+}
+.button.button-positive.activated {
+    background-color: #b53d56;
+      border-color: #b53d56;
+}
+.bar.bar-stable.bar-footer {
+    background-color:#B53D56;
+}
+.bar-stable .button.button-clear {
+
+    color:white;
+}

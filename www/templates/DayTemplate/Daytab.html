@@ -1,0 +1,18 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<div>
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive tabs-top customClass" >         
+      <ion-tab title="Today" href="#/Daytab/Today/0" >
+        <ion-nav-view name="Daytab-Today"></ion-nav-view> 
+      </ion-tab>
+      <ion-tab title="Yesterday" href="#/Daytab/Today/1">
+        <ion-nav-view name="Daytab-Today"></ion-nav-view>
+      </ion-tab> 
+      <ion-tab title="Date?" href="#/Daytab/Today/2">
+        <ion-nav-view name="Daytab-Date"></ion-nav-view>
+      </ion-tab> 
+    </ion-tabs>
+</div>
